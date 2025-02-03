@@ -1,3 +1,1 @@
-The program's parent process is the shell process
-The shell process parent process is the init process
-The init process parent process is Process 0
+I tested this several times with my own Terminal setup, running both the python3 program and the 'top' program. In both cases, the parent process of the program is -zsh which is my shell. Then, the parent process of the shell is login. Finally, the parent process of login is /System/Applicat. I had expected to either see the parent of the shell be a terminal emulator or the init process. However, the parent process of /System/Applicat is launchd (similar to the init process).
